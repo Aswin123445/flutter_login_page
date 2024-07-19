@@ -15,6 +15,7 @@ class Pallete {
   static const Color greyColor = Colors.grey;
   static const Color errorColor = Colors.redAccent;
   static const Color transparentColor = Colors.transparent;
-
+  static const Color lightwhiteColor = Color.fromARGB(255, 135, 145, 157);
   static const Color inactiveSeekColor = Colors.white38;
+  static const Color greenColor1 = Color.fromARGB(204, 37, 101, 39);
 }
