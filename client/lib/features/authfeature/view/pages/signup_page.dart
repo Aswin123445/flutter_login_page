@@ -31,7 +31,7 @@ class _SignUpPageState extends State<SignUpPage> {
             children: [
               keyboardHeight > 0
                   ? SizedBox(
-                      height: screenHeight * .05,
+                      height: screenHeight * .13,
                       width: double.infinity,
                     )
                   : SizedBox(
