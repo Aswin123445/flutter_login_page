@@ -2,6 +2,7 @@ import 'package:client/core/app_pallet.dart';
 import 'package:client/features/authfeature/view/widgets/custom_gradient_button.dart';
 import 'package:client/features/authfeature/view/widgets/custom_textform_field.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -36,6 +37,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   : SizedBox(
                       height: screenHeight * .33,
                       width: double.infinity,
+                      child: Lottie.asset(
+                        'asset/signup1.json',
+                        fit: BoxFit.contain,
+                      ),
                     ),
               const Text(
                 "Sign Up.",
@@ -44,7 +49,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   fontSize: 50,
                 ),
               ),
-              SizedBox(height: screenHeight * .06),
+              SizedBox(height: screenHeight * .03),
               SizedBox(
                 width: double.infinity,
                 height: screenHeight * .4,
