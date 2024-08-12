@@ -14,6 +14,8 @@ class AppTheme {
     inputDecorationTheme: InputDecorationTheme(
       focusedBorder: _border(const Color(0xFFadbada)),
       enabledBorder: _border(Pallete.borderColor),
+      errorBorder: _border(const Color(0xFFEF9A9A)),
+      focusedErrorBorder: _border(const Color(0xFFEF9A9A)),
     ),
   );
 }
