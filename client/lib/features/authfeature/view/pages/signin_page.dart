@@ -4,23 +4,21 @@ import 'package:client/features/authfeature/view/widgets/custom_textform_field.d
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({super.key});
+class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignInPageState extends State<SignInPage> {
   final formKey = GlobalKey<FormState>();
-  final nameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   bool isIconVisibel = true;
   bool isObscureText = true;
   @override
   void dispose() {
-    nameController.dispose();
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
@@ -59,7 +57,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                       ),
                 const Text(
-                  "Sign Up.",
+                  "Sign In.",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 50,
@@ -72,17 +70,6 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        CustomText(
-                          obscure: false,
-                          hintText: "name",
-                          controller: nameController,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return "name is missing";
-                            }
-                            return null;
-                          },
-                        ),
                         const SizedBox(height: 7),
                         CustomText(
                           obscure: false,
@@ -126,7 +113,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: CustomGradientButton(
-                            buttonName: "Sign Up",
+                            buttonName: "Sign In",
                             onTap: () {
                               formKey.currentState?.validate();
                             },
@@ -138,9 +125,10 @@ class _SignUpPageState extends State<SignUpPage> {
                           child: Row(
                             children: [
                               Container(
-                                padding: const EdgeInsets.only(top: 3),
+                                padding:
+                                    const EdgeInsets.only(top: 3, left: 13),
                                 child: Text(
-                                  "Already have an account",
+                                  "new around here",
                                   style: TextStyle(
                                     fontSize: 13,
                                     color: Pallete.lightwhiteColor,
@@ -167,7 +155,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 child: InkWell(
                                   onTap: () {},
                                   child: const Text(
-                                    "Sign In",
+                                    "Sign Up",
                                     style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       color: Pallete.gradient3,
